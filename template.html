@@ -1,0 +1,107 @@
+<!-- FIELDS -->
+
+1: Rename Text field to Keyword
+2: IMG
+3: Definition
+4: Example
+5: Russian
+6: Sound
+7: Transcription
+
+
+<!-- FRONT TEMPLATE -->
+
+<script>document.getElementById('Deck').innerHTML="{{Deck}}".replace("::"," &minus; ");</script>
+
+{{IMG}}
+<div class=Definition><span>{{cloze:Definition}}</span></div>
+<div class=Example><span>{{cloze:Example}}</span></div>
+
+{{type:cloze:Definition}}
+
+
+<!-- BACK TEMPLATE -->
+
+<script>document.getElementById('Deck').innerHTML="{{Deck}}".replace("::"," &minus; ");</script>
+
+{{IMG}}
+<div class=Definition><span>{{cloze:Definition}}</span></div>
+<div class=Example><span>{{cloze:Example}}</span></div>
+
+{{type:cloze:Definition}}
+
+<!hr id=answer>
+
+<div class=Transcription><span>{{Transcription}}</span></div>
+
+<div class=Russian><span>{{Russian}}</span></div>
+<div class=Sound><span>{{Sound}}</span></div>
+ 
+
+<!-- STYLING -->
+
+.nightMode .cloze {
+    font-weight: bold;
+    color: lightblue;
+}
+.card {
+    font-family: arial;
+    line-height: 1.75em;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.Deck {
+    position: absolute; top: 7px; left: 0px; width: 100%;
+}
+#Deck {
+    font-size: 8pt; vertical-align: top; line-height: 10pt;
+}
+#typeans {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 15px;
+    max-width: 300px;
+}
+#typeans span {
+    background-color: #2c2c2c;
+}
+input#typeans {
+    border-radius: 9px
+}
+IMG {
+    border-radius: 19px;
+    width: 100%;
+    max-width: 128px;
+}
+div span {
+    max-width: 900px;
+    display: inline-block;
+    text-align: left;
+}
+.Transcription {
+    font-family: Lucida Sans Unicode;
+    color: gray;
+
+}
+.Example {
+    font-style: italic;
+    color: gray;
+    font-size: 18px;
+}
+.typeBad {
+    color: #dc322f;
+    font-weight: bold;
+    font-size: 23px;
+}
+.typeMissed, .typePass {
+    color: #268bd2;
+    font-weight: bold;
+    font-size: 23px;
+}
+.typeGood {
+    color: #2ed85a;
+    font-weight: bold;
+    font-size: 23px;
+}
+
